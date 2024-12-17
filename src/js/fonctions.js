@@ -50,59 +50,59 @@ const effacerEcriture = () => {
 
 
 // Bascule Mode (clair/sombre)
-const toggleButton = document.querySelector("#toggle-theme");
-const linkedinIcon = document.querySelector("#linkedin-icon");
-const githubIcon = document.querySelector("#github-icon");
+const boutonTheme = document.querySelector("#toggle-theme");
+const iconeLinkedin = document.querySelector("#linkedin-icon");
+const iconGithub = document.querySelector("#github-icon");
 const githubSkill = document.querySelector("#logo-github")
 
 // Fonction pour changer les icônes selon le thème
-function updateIcons(theme) {
+function majDesIcones(theme) {
     if (theme === "dark") {
-        linkedinIcon.src = "/src/img/logo-linkedin-blanc.svg";
-        githubIcon.src = "/src/img/logo-github-blanc.svg";
+        iconeLinkedin.src = "/src/img/logo-linkedin-blanc.svg";
+        iconGithub.src = "/src/img/logo-github-blanc.svg";
         githubSkill.src = "/src/img/logo-github-blanc.svg";
     } else {
-        linkedinIcon.src = "/src/img/logo-linkedin.svg";
-        githubIcon.src = "/src/img/logo-github.svg";
+        iconeLinkedin.src = "/src/img/logo-linkedin.svg";
+        iconGithub.src = "/src/img/logo-github.svg";
         githubSkill.src = "/src/img/logo-github.svg";
     }
 }
 
 // Fonction pour mettre à jour le thème et le bouton
-function updateTheme(theme) {
+function majDuTheme(theme) {
     document.body.setAttribute("data-theme", theme);
 
     // Mise à jour du texte du bouton
     if (theme === "dark") {
-        toggleButton.textContent = "🌕";
+        boutonTheme.textContent = "🌕";
     } else {
-    toggleButton.textContent = "☀️";
+    boutonTheme.textContent = "☀️";
     }
 
     // Mise à jour des icônes
-    updateIcons(theme);
+    majDesIcones(theme);
 
     // Sauvegarde du choix dans localStorage
     localStorage.setItem("theme", theme);
 }
 
 // Récupérer le thème sauvegardé dans localStorage
-const savedTheme = localStorage.getItem("theme") || "light";
+const sauvegardeDuTheme = localStorage.getItem("theme") || "light";
 
 // Appliquer le thème sauvegardé au chargement de la page
-updateTheme(savedTheme);
+majDuTheme(sauvegardeDuTheme);
 
 // Ajouter un événement au bouton pour basculer le thème
-toggleButton.addEventListener("click", () => {
+boutonTheme.addEventListener("click", () => {
     const currentTheme = document.body.getAttribute("data-theme") || "light";
-    let newTheme;
+    let nouveauTheme;
 
     if (currentTheme === "dark") {
-        newTheme = "light";
+        nouveauTheme = "light";
     } else {
-        newTheme = "dark";
+        nouveauTheme = "dark";
     }
 
     // Appliquer le nouveau thème
-    updateTheme(newTheme);
+    majDuTheme(nouveauTheme);
 });
