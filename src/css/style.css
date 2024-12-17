@@ -374,16 +374,27 @@ h3 {
     background-color: #e0c007;
 }
 
-.card-btn {
+.liens-acces {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.card-btn, .card-btn-git {
     margin-top: 3rem;
     text-decoration: none;
     text-align: center;
     color: #000;
     background-color: #fff;
     font-size: 1.4rem;
-    padding: 0 5px;
+    padding: 0.5rem;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.card-btn-git {
+    color: #fff;
+    background-color: #000;
 }
 
 /*---------------Page Contact---------------*/
