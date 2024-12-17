@@ -170,12 +170,6 @@ section {
     animation: write 0.5s step-end infinite; /* Curseur clignotant */
 }
 
-@keyframes write {
-    50% {
-        border-color: transparent;
-    }
-}
-
 /* Je suis */
 .phrase {
     margin-top: 3rem;
@@ -259,7 +253,6 @@ h3 {
     align-items: center;
     justify-items: center;
 }
-
 
 /* Logos des skills */
 #logo-html {
@@ -496,5 +489,11 @@ footer p {
 
     100% {
         left: 0%;
+    }
+}
+
+@keyframes write {
+    50% {
+        border-color: transparent;
     }
 }
