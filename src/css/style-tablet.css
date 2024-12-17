@@ -82,5 +82,10 @@
     .resume-about {
         flex-direction: column-reverse;
     }
+
+    #about, #realisation, #contact {
+        width: 90%;
+        margin: auto;
+    }
 }
 

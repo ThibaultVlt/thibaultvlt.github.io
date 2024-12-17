@@ -2,11 +2,34 @@
 
 @media (width <=480px) {
 
-    main {
-        width: 80%;
+    #about, #realisation, #contact {
+        width: 95%;
         margin: auto;
     }
 
+    #accueil {
+        background:none;
+    }
+
+    /* À propos */
+    #about-skill {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #photo-thibault {
+        float: none;
+        width: 200px;
+        display: block;
+        margin: 0 auto 2rem;
+    }
+
+    /* Images des compétences */
+    .img-skills {
+        width: 80%;
+        grid-template-columns: 1fr 1fr;
+    }
 
 
     

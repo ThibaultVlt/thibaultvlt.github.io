@@ -109,6 +109,7 @@ nav img {
 
 section {
     max-width: 1280px;
+    width: 90%;
     margin: auto;
 }
 
@@ -239,6 +240,7 @@ h2 {
 p, strong {
     font-size: 2rem;
     font-weight: lighter;
+    text-align: justify;
 }
 
 h3 {
