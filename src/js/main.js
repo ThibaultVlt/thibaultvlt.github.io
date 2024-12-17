@@ -7,5 +7,5 @@
 
 // Lancer l'effet machine à écrire
 document.addEventListener("DOMContentLoaded", () => {
-    typeWriter();
+    effetMachineAEcrire();
   });

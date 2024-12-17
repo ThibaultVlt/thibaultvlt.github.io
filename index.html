@@ -227,14 +227,20 @@
             <!-- --------------- Contact -------------------- -->
             <section id="contact">
                 <h2 id="titre-contact">Contact</h2>
+                <form action="https://formspree.io/f/manygypq" method="POST">
+                    <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+                    <input type="text" id="prenom" name="prenom" placeholder="Votre prénom">
+                    <input type="email" id="email" name="email" placeholder="Votre email" required>
+                    <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
+                    <div class="boutons">
+                        <button type="submit" id="submit">Envoyer</button>
+                        <button type="reset" id="reset">Annuler</button>
+                    </div>
+                </form>
                 <div class="contact">
                     <a href="https://www.linkedin.com/in/thibaultvollet/" id="linkedin-link" aria-label="Visitez mon profil Linkedin">
                         <img src="/src/img/logo-linkedin.svg" id="linkedin-icon" alt="Logo vers mon profil Linkedin" />
                         /thibaultvollet
-                    </a>
-                    <a href="mailto:thibvollet@gmail.com" id="mail-link">
-                        <img src="/src/img/img_mail.png" id="mail-icon" alt="Lien vers l'envoi de mail">
-                        thibvollet@gmail.com
                     </a>
                     <a href="https://github.com/ThibaultVlt" id="github-link" aria-label="Visitez mon profil GitHub">
                         <img src="/src/img/logo-github.svg" id="github-icon" alt="Lien vers mon profil Github" />

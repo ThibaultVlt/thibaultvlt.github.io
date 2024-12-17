@@ -9,50 +9,40 @@
         burger.setAttribute('aria-expanded', isActive);//Mettre à jour l'attribut pour les lecteurs 
     });
 
-    // Effet machine à écrire
-
-// const text = document.querySelector(".bvn");
-// const messages = ["Boujou !", "Welcome !", "Bienvenue !"];
-// let currentMessageIndex = 0;
-
-// const textLoad = () => {
-//     text.textContent = messages[currentMessageIndex];
-//     currentMessageIndex = (currentMessageIndex + 1) % messages.length; // Passer au message suivant
-// };
-
+//Effet machine à écrire
 const text = document.querySelector(".bvn");
 const messages = ["Boujou !", "Welcome !", "Bienvenue !"];
-let currentMessageIndex = 0;
-let charIndex = 0; // Pour écrire lettre par lettre
-const typingSpeed = 100; // Vitesse d'écriture (en ms)
-const delayBetweenMessages = 4000; // Délai avant le prochain message (en ms)
+let messageActuelIndex = 0;
+let indiceCaractere = 0; //Écriture lettre par lettre
+const vitesseEcriture = 100; //Vitesse d'écriture (en ms)
+const dureeEntreMots = 2000; //Durée avant le prochain message (en ms)
 
-// Fonction pour écrire un message lettre par lettre
-const typeWriter = () => {
-  const currentMessage = messages[currentMessageIndex];
+//Fonction pour écrire un message lettre par lettre
+const effetMachineAEcrire = () => {
+  const messageActuel = messages[messageActuelIndex];
 
-  if (charIndex < currentMessage.length) {
-    text.textContent += currentMessage.charAt(charIndex);
-    charIndex++;
-    setTimeout(typeWriter, typingSpeed); // Continue d'écrire lettre par lettre
+  if (indiceCaractere < messageActuel.length) {
+    text.textContent += messageActuel.charAt(indiceCaractere);
+    indiceCaractere++;
+    setTimeout(effetMachineAEcrire, vitesseEcriture); //Continuer d'écrire lettre par lettre
   } else {
-    // Une fois le message terminé, attendre avant d'effacer
+    //Mot terminé, attendre pour effacer
     setTimeout(() => {
-      eraseWriter();
-    }, delayBetweenMessages);
+      effacerEcriture();
+    }, dureeEntreMots);
   }
 };
 
 // Effacement du message lettre par lettre
-const eraseWriter = () => {
-  if (charIndex > 0) {
-    text.textContent = text.textContent.slice(0, charIndex - 1);
-    charIndex--;
-    setTimeout(eraseWriter, typingSpeed); // Continue d'effacer lettre par lettre
+const effacerEcriture = () => {
+  if (indiceCaractere > 0) {
+    text.textContent = text.textContent.slice(0, indiceCaractere - 1);
+    indiceCaractere--;
+    setTimeout(effacerEcriture, vitesseEcriture); // Continue d'effacer lettre par lettre
   } else {
     // Une fois effacé, passer au message suivant
-    currentMessageIndex = (currentMessageIndex + 1) % messages.length; // Passer au message suivant
-    typeWriter(); // Redémarrer l'écriture
+    messageActuelIndex = (messageActuelIndex + 1) % messages.length; // Passer au message suivant
+    effetMachineAEcrire(); // Redémarrer l'écriture
   }
 };
 
@@ -62,7 +52,6 @@ const eraseWriter = () => {
 // Bascule Mode (clair/sombre)
 const toggleButton = document.querySelector("#toggle-theme");
 const linkedinIcon = document.querySelector("#linkedin-icon");
-const mailIcon = document.querySelector("#mail-icon");
 const githubIcon = document.querySelector("#github-icon");
 const githubSkill = document.querySelector("#logo-github")
 
@@ -70,12 +59,10 @@ const githubSkill = document.querySelector("#logo-github")
 function updateIcons(theme) {
     if (theme === "dark") {
         linkedinIcon.src = "/src/img/logo-linkedin-blanc.svg";
-        mailIcon.src = "/src/img/logo-mail-blanc.svg";
         githubIcon.src = "/src/img/logo-github-blanc.svg";
         githubSkill.src = "/src/img/logo-github-blanc.svg";
     } else {
         linkedinIcon.src = "/src/img/logo-linkedin.svg";
-        mailIcon.src = "/src/img/img_mail.png";
         githubIcon.src = "/src/img/logo-github.svg";
         githubSkill.src = "/src/img/logo-github.svg";
     }
