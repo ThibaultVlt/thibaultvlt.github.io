@@ -1,13 +1,25 @@
 "use strict";
-// Menu nav grace au burger
+// Menu nav grâce au burger
+const burger = document.querySelector('#burger');
+const menu = document.querySelector('#menu-list');
+const menuLinks = document.querySelectorAll('#menu-list a'); // Sélectionner tous les liens du menu
 
-    const burger = document.querySelector('#burger');
-    const menu = document.querySelector('#menu-list');
-    burger.addEventListener('click', () =>{
-        const isActive = burger.classList.toggle('active');
-        menu.classList.toggle('active');
-        burger.setAttribute('aria-expanded', isActive);//Mettre à jour l'attribut pour les lecteurs 
-    });
+burger.addEventListener('click', () => {
+    const isActive = burger.classList.toggle('active');
+    menu.classList.toggle('active');
+    burger.setAttribute('aria-expanded', isActive); // Mettre à jour l'attribut pour les lecteurs
+});
+
+    //Fermer le menu automatiquement au clic
+menuLinks.forEach(link => {
+  link.addEventListener('click', () => {
+      if (menu.classList.contains('active')) {
+          menu.classList.remove('active'); // Fermer le menu
+          burger.classList.remove('active'); // Désactiver l'état du burger
+          burger.setAttribute('aria-expanded', false); // Mettre à jour l'attribut aria
+      }
+  });
+});
 
 //Effet machine à écrire
 const text = document.querySelector(".bvn");
@@ -33,15 +45,15 @@ const effetMachineAEcrire = () => {
   }
 };
 
-// Effacement du message lettre par lettre
+//Effacer le message lettre par lettre
 const effacerEcriture = () => {
   if (indiceCaractere > 0) {
     text.textContent = text.textContent.slice(0, indiceCaractere - 1);
     indiceCaractere--;
-    setTimeout(effacerEcriture, vitesseEcriture); // Continue d'effacer lettre par lettre
+    setTimeout(effacerEcriture, vitesseEcriture); //Continue d'effacer lettre par lettre
   } else {
-    // Une fois effacé, passer au message suivant
-    messageActuelIndex = (messageActuelIndex + 1) % messages.length; // Passer au message suivant
+    //Une fois effacé, passer au message suivant
+    messageActuelIndex = (messageActuelIndex + 1) % messages.length; //Passer au message suivant
     effetMachineAEcrire(); // Redémarrer l'écriture
   }
 };
