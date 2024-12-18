@@ -62,11 +62,12 @@
         width: 105vw;
         height: 100vh;
         position: absolute;
-        top: 102px;
+        top: 100px;
         left: -105vw;
         background: #fff;
         transition: left 1s ease-in-out;
         z-index: 10;
+        padding-top: 1rem;
     }
 
 

@@ -15,8 +15,8 @@ menuLinks.forEach(link => {
   link.addEventListener('click', () => {
       if (menu.classList.contains('active')) {
           menu.classList.remove('active'); // Fermer le menu
-          burger.classList.remove('active'); // Désactiver l'état du burger
-          burger.setAttribute('aria-expanded', false); // Mettre à jour l'attribut aria
+          burger.classList.remove('active'); //Désactiver l'état du burger
+          burger.setAttribute('aria-expanded', false);
       }
   });
 });
