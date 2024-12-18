@@ -121,19 +121,19 @@ boutonTheme.addEventListener("click", () => {
 
 //Effet Fade-in
 document.addEventListener("DOMContentLoaded", () => {
-  const fadeInElements = document.querySelectorAll('.fade-in');
+  const elementFadeIn = document.querySelectorAll('.fade-in');
 
   const handleScroll = () => {
-    fadeInElements.forEach((el) => {
+    elementFadeIn.forEach((el) => {
       const rect = el.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
+      const hauteurFenetre = window.innerHeight;
 
       // Calcule la position relative de l'élément dans la fenêtre (entre 0 et 1)
-      const progress = Math.max(0, Math.min(1, (windowHeight - rect.top) / windowHeight));
+      const progression = Math.max(0, Math.min(1, (hauteurFenetre - rect.top) / hauteurFenetre));
 
       // Appliquer l'opacité et la transformation selon la position
-      el.style.opacity = progress; // Opacité entre 0 (invisible) et 1 (visible)
-      el.style.transform = `translateY(${(1 - progress) * 20}px)`; // Translation dynamique
+      el.style.opacity = progression; // Opacité entre 0 (invisible) et 1 (visible)
+      el.style.transform = `translateY(${(1 - progression) * 20}px)`; // Translation dynamique
     });
   };
 
