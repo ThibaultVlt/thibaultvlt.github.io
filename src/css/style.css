@@ -491,6 +491,19 @@ footer p {
 
 /* ANIMATIONS */
 
+/* État initial (invisible) */
+.fade-in {
+    opacity: 0; /* Départ invisible */
+    transform: translateY(20px); /* Décalage initial */
+    transition: opacity 0.5s ease-out, transform 0.3s ease-out;
+}
+
+/* État visible (apparaît à l'écran) */
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0); /* Retour à la position initiale */
+}
+
 /* Machine à écrire */
 @keyframes ecriture {
     40%,

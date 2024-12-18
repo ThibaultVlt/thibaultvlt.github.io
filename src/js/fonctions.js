@@ -1,4 +1,5 @@
 "use strict";
+// ------------MENU BURGER------------
 // Menu nav grâce au burger
 const burger = document.querySelector('#burger');
 const menu = document.querySelector('#menu-list');
@@ -21,6 +22,7 @@ menuLinks.forEach(link => {
   });
 });
 
+//------------EFFET MACHINE À ÉCRIRE------------
 //Effet machine à écrire
 const text = document.querySelector(".bvn");
 const messages = ["Boujou !", "Welcome !", "Bienvenue !"];
@@ -58,9 +60,7 @@ const effacerEcriture = () => {
   }
 };
 
-
-
-
+//------------LIgHT MODE / DARK MODE ------------
 // Bascule Mode (clair/sombre)
 const boutonTheme = document.querySelector("#toggle-theme");
 const iconeLinkedin = document.querySelector("#linkedin-icon");
@@ -117,4 +117,29 @@ boutonTheme.addEventListener("click", () => {
 
     // Appliquer le nouveau thème
     majDuTheme(nouveauTheme);
+});
+
+//Effet Fade-in
+document.addEventListener("DOMContentLoaded", () => {
+  const fadeInElements = document.querySelectorAll('.fade-in');
+
+  const handleScroll = () => {
+    fadeInElements.forEach((el) => {
+      const rect = el.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      // Calcule la position relative de l'élément dans la fenêtre (entre 0 et 1)
+      const progress = Math.max(0, Math.min(1, (windowHeight - rect.top) / windowHeight));
+
+      // Appliquer l'opacité et la transformation selon la position
+      el.style.opacity = progress; // Opacité entre 0 (invisible) et 1 (visible)
+      el.style.transform = `translateY(${(1 - progress) * 20}px)`; // Translation dynamique
+    });
+  };
+
+  // Attacher l'événement de scroll
+  window.addEventListener('scroll', handleScroll);
+
+  // Appeler une fois pour initialiser
+  handleScroll();
 });

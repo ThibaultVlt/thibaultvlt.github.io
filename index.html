@@ -40,7 +40,7 @@
         <main>
             <!-- --------------- ACCUEIL -------------------- -->
             <div id="accueil">
-                <section id="principal">
+                <section id="principal" class="fade-in">
                     <div class="principal">
                         <div class="typewriter">
                             <span class="bvn"></span>
@@ -61,7 +61,7 @@
                 </section>
             </div>
             <!-- --------------- À PROPOS -------------------- -->
-            <section id="about">
+            <section id="about" class="fade-in">
                 <h2 id="title-about">Qui suis-je ?</h2>
                 <article class="about-skills">
                     <img
@@ -138,9 +138,48 @@
                 </article>
             </section>
             <!-- --------------- Réalisation -------------------- -->
-            <section id="realisation">
+            <section id="realisation" class="fade-in">
                 <h2 id="titre-realisation">Réalisation</h2>
                 <div class="card-section">
+                    <!-- CARTE PORTFOLIO -->
+                    <div class="card">
+                        <img
+                            class="card-img"
+                            src="/src/img/realisation/portfolio.PNG"
+                            alt="Capture d'écran du jeu du pendu réalisé en HTML, CSS et JavaScript"
+                            title="Jeu du pendu"
+                        />
+                        <div class="card-body">
+                            <h3 class="card-title">Ce portfolio</h3>
+                            <p class="card-description">
+                            Le portfolio sur lequel vous naviguez en ce moment.
+                            </p>
+                            <div class="card-techno">
+                                <p class="card-type card-html">HTML</p>
+                                <p class="card-type card-css">CSS</p>
+                                <p class="card-type card-javascript">Javascript</p>
+                            </div>
+                            <div class="liens-acces">
+                                <a
+                                class="card-btn-git"
+                                href="https://github.com/ThibaultVlt/thibaultvlt.github.io"
+                                title="redirection vers le Github du projet"
+                                aria-label="Visitez le Github du portfolio"
+                                >
+                                Accès vers Github
+                                </a>
+                                <a
+                                class="card-btn"
+                                href="/"
+                                title="redirection vers le projet"
+                                aria-label="Tentez de jouer au pendu"
+                                >
+                                Vous êtes déjà dessus &#x1F609;
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- CARTE PENDU -->
                     <div class="card">
                         <img
                             class="card-img"
@@ -153,32 +192,32 @@
                             <p class="card-description">
                             Jeu interactif réalisé durant ma formation à L'AFPA.
                             </p>
-                        <div class="card-techno">
-                            <p class="card-type card-html">HTML</p>
-                            <p class="card-type card-bootstrap">Bootstrap</p>
-                            <p class="card-type card-javascript">Javascript</p>
-                        </div>
-                        <div class="liens-acces">
-                            <a
-                            class="card-btn-git"
-                            href="https://github.com/ThibaultVlt/Pendu"
-                            title="redirection vers le Github du projet"
-                            aria-label="Visitez le site de la galerie d'art"
-                            >
-                            Accès vers Github
-                            </a>
-                            <a
-                            class="card-btn"
-                            href="https:\/\/thibaultvlt.github.io/Pendu/"
-                            title="redirection vers le projet"
-                            aria-label="Tentez de jouer au pendu"
-                            >
-                            Visitez le site
-                            </a>
-                        </div>
-                            
+                            <div class="card-techno">
+                                <p class="card-type card-html">HTML</p>
+                                <p class="card-type card-bootstrap">Bootstrap</p>
+                                <p class="card-type card-javascript">Javascript</p>
+                            </div>
+                            <div class="liens-acces">
+                                <a
+                                class="card-btn-git"
+                                href="https://github.com/ThibaultVlt/Pendu"
+                                title="redirection vers le Github du projet"
+                                aria-label="Visitez le Github du jeu du pendu"
+                                >
+                                Accès vers Github
+                                </a>
+                                <a
+                                class="card-btn"
+                                href="https:\/\/thibaultvlt.github.io/Pendu/"
+                                title="redirection vers le projet"
+                                aria-label="Tentez de jouer au pendu"
+                                >
+                                Visitez le site
+                                </a>
+                            </div>
                         </div>
                     </div>
+                    <!-- CARTE JUSTE PRIX -->
                     <div class="card">
                         <img
                         class="card-img"
@@ -195,68 +234,69 @@
                                 <p class="card-type card-html">HTML</p>
                                 <p class="card-type card-bootstrap">Bootstrap</p>
                                 <p class="card-type card-javascript">Javascript</p>
-                        </div>
-                        <div class="liens-acces">
-                            <a
-                            class="card-btn-git"
-                            href="https://github.com/ThibaultVlt/Juste_prix"
-                            title="redirection vers le Github du projet"
-                            aria-label="Visitez le site de la galerie d'art"
-                            >
-                            Accès vers Github
-                            </a>
-                            <a
-                            class="card-btn"
-                            href="https://thibaultvlt.github.io/Juste_prix/"
-                            title="Capture d'écran du site de la galerie d'art dédié aux artistes peintres, réalisé en HTML, CSS et JavaScript "
-                            aria-label="tentez de jouer au juste prix"
-                            >
-                            Visitez le site
-                            </a>
+                            </div>
+                            <div class="liens-acces">
+                                <a
+                                class="card-btn-git"
+                                href="https://github.com/ThibaultVlt/Juste_prix"
+                                title="redirection vers le Github du projet"
+                                aria-label="Visitez le Github du jeu du juste prix"
+                                >
+                                Accès vers Github
+                                </a>
+                                <a
+                                class="card-btn"
+                                href="https://thibaultvlt.github.io/Juste_prix/"
+                                title="Capture d'écran du site de la galerie d'art dédié aux artistes peintres, réalisé en HTML, CSS et JavaScript "
+                                aria-label="tentez de jouer au juste prix"
+                                >
+                                Visitez le site
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
+                    <!-- CARTE GALERIE -->
                     <div class="card">
-                    <img
-                        class="card-img"
-                        src="/src/img/realisation/atelier_peintre.JPG"
-                        alt="jeu du pendu"
-                        title="Jeu du pendu"
-                        />
-                    <div class="card-body">
-                        <h3 class="card-title">Les artistes peintres</h3>
-                        <p class="card-description">
-                        Site d'une galerie d'art réalisé durant ma formation à l'AFPA.
-                        </p>
-                        <div class="card-techno">
-                            <p class="card-type card-html">HTML</p>
-                            <p class="card-type card-css">CSS</p>
-                            <p class="card-type card-javascript">Javascript</p>
-                        </div>
-                        <div class="liens-acces">
-                            <a
-                            class="card-btn-git"
-                            href="https://github.com/ThibaultVlt/Atelier_peintre"
-                            title="redirection vers le Github du projet"
-                            aria-label="Visitez le site de la galerie d'art"
-                            >
-                            Accès vers Github
-                            </a>
-                            <a
-                            class="card-btn"
-                            href="https://thibaultvlt.github.io/Atelier_peintre/"
-                            title="redirection vers le projet"
-                            aria-label="Visitez le site de la galerie d'art"
-                            >
-                            Visitez le site
-                            </a>
+                        <img
+                            class="card-img"
+                            src="/src/img/realisation/atelier_peintre.JPG"
+                            alt="jeu du pendu"
+                            title="Jeu du pendu"
+                            />
+                        <div class="card-body">
+                            <h3 class="card-title">Les artistes peintres</h3>
+                            <p class="card-description">
+                            Site d'une galerie d'art réalisé durant ma formation à l'AFPA.
+                            </p>
+                            <div class="card-techno">
+                                <p class="card-type card-html">HTML</p>
+                                <p class="card-type card-css">CSS</p>
+                                <p class="card-type card-javascript">Javascript</p>
+                            </div>
+                            <div class="liens-acces">
+                                <a
+                                class="card-btn-git"
+                                href="https://github.com/ThibaultVlt/Atelier_peintre"
+                                title="redirection vers le Github du projet"
+                                aria-label="Visitez le site de la galerie d'art"
+                                >
+                                Accès vers Github
+                                </a>
+                                <a
+                                class="card-btn"
+                                href="https://thibaultvlt.github.io/Atelier_peintre/"
+                                title="redirection vers le projet"
+                                aria-label="Visitez le site de la galerie d'art"
+                                >
+                                Visitez le site
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
                 </div>
             </section>
             <!-- --------------- Contact -------------------- -->
-            <section id="contact">
+            <section id="contact" class="fade-in">
                 <h2 id="titre-contact">Contact</h2>
                 <form action="https://formspree.io/f/manygypq" method="POST">
                     <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
