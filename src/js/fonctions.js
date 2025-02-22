@@ -70,13 +70,13 @@ const githubSkill = document.querySelector("#logo-github")
 // Fonction pour changer les icônes selon le thème
 function majDesIcones(theme) {
     if (theme === "dark") {
-        iconeLinkedin.src = "/src/img/logo-linkedin-blanc.svg";
-        iconGithub.src = "/src/img/logo-github-blanc.svg";
-        githubSkill.src = "/src/img/logo-github-blanc.svg";
+        iconeLinkedin.src = "/src/img/logo-linkedin-blanc.webp";
+        iconGithub.src = "/src/img/logo-github-blanc.webp";
+        githubSkill.src = "/src/img/logo-github-blanc.webp";
     } else {
-        iconeLinkedin.src = "/src/img/logo-linkedin.svg";
-        iconGithub.src = "/src/img/logo-github.svg";
-        githubSkill.src = "/src/img/logo-github.svg";
+        iconeLinkedin.src = "/src/img/logo-linkedin.webp";
+        iconGithub.src = "/src/img/logo-github.webp";
+        githubSkill.src = "/src/img/logo-github.webp";
     }
 }
 

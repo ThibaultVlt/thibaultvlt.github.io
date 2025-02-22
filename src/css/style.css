@@ -137,7 +137,7 @@ section {
 
 /*---------------Page Accueil---------------*/
 #accueil {
-    background: url("/src/img/photo_fond/Design\ sans\ titre.png");
+    background: url("/src/img/photo_fond/ecran.webp");
     object-fit: contain;
     margin-bottom: 1rem;
     background-color: #0000005b;
@@ -265,6 +265,10 @@ h3 {
 
 #logo-js {
     width: 79px;
+}
+
+#logo-laravel {
+    width: 95px;
 }
 
 #logo-bootstrap {
