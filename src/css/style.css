@@ -378,6 +378,10 @@ h3 {
     background-color: #e0c007;
 }
 
+.card-laravel {
+    background-color: #f11000;
+}
+
 .liens-acces {
     display: flex;
     justify-content: center;
